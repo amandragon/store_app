@@ -1,0 +1,26 @@
+<nav>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/products">Products List</a></li>
+      <li class="active"><a href="/categories">Category List</a></li>
+      <li><a href="/products/new">New Product</a></li>
+      <li><a href="/categories/new">New Product</a></li>
+     
+    </ul>
+
+</nav>
+
+
+
+
+
+<h2>Welcome to the shop!</h3>
+<h3>Below is a list of the products we sell.</h3>
+
+<h3>Products</h3>
+<ul>
+  <% @products.each do |c| %>
+    <li>
+      <%= link_to p.name, products_path(p) %>
+    </li>
+  <% end %>
+</ul>
